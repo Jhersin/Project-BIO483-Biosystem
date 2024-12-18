@@ -11,9 +11,9 @@ x = B(y)
 $$
 
 Where:  
-- \(x\) represents the undersampled data in the image domain,  
-- \(y\) represents the fully sampled data in the image domain,  
-- \(B\) is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
+- x represents the undersampled data in the image domain,  
+- y represents the fully sampled data in the image domain,  
+- B is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
 
 ### Loss Function
 
