@@ -15,17 +15,22 @@ Where:
 - \(y\) represents the fully sampled data in the image domain,  
 - \(B\) is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
 
+### Loss Function
+
 The loss function used to train the model is as follows:
 
 $$
-\theta_B = \min_{\theta} \left( \frac{1}{2} \sum \| \theta_B(y) - x \|^2 \right)
+\theta_B = \min_{\theta} \left( \frac{1}{2} \sum \| B(y) \theta - x \|^2 \right)
 $$
 
 Where:  
 - \(\theta_B\) represents the parameters of the matrix \(B\) that we want to compute.  
 - The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
 
+### Optimization
+
 The optimization problem is solved using the Adam optimization method.
+
 
 ## Table of Contents
 1. [Features](#features)
