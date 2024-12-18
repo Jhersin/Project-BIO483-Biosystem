@@ -7,7 +7,7 @@ This project explores a machine learning-based approach for improving image qual
 In this approach, we have access to both the undersampled and fully sampled data. The objective is to calculate the parameters of a matrix that can convert the undersampled data into fully sampled data. This problem can be mathematically expressed as:
 
 $$
-x = B(y)
+x = B_{\theta}(y)
 $$
 
 Where:  
