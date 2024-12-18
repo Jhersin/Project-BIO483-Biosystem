@@ -20,7 +20,7 @@ Where:
 The loss function used to train the model is as follows:
 
 $$
-B_{\theta} = \min_{\theta} \left( \frac{1}{2} \sum_{i=0}^{N_{\text{data}}} \| B_{\theta} (y)  - x \|_2^2 \right)
+B_{\theta} = \min_{\theta} \left( \frac{1}{2} \sum_{i=0}^{N_{\text{data}}} \|| B_{\theta} (y)  - x \||^2 \right)
 $$
 
 Where:  
