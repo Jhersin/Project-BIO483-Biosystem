@@ -25,7 +25,8 @@ $$
 
 Where:  
 - $$B_{\theta}$$ represents the parameters of the matrix \(B\) that we want to compute.  
-- The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
+
+The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
 
 ### Optimization
 
