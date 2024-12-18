@@ -31,7 +31,7 @@ B_{\theta} = \min_{\theta} \left( \frac{1}{2} \sum_{i=0}^{N_{\text{data}}} \left
 $$
 
 Where:  
-- **$$B_{\theta}$$** represents the parameters of the matrix \(B\) that we want to compute.  
+- **B_{\theta}** represents the parameters of the matrix \(B\) that we want to compute.  
 
 The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
 
