@@ -28,9 +28,7 @@ Where:
 
 The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
 
-### Optimization
-
-The optimization problem is solved using the Adam optimization method.
+The optimization problem is solved using the Adam optimization algortihm.
 
 
 ## Table of Contents
