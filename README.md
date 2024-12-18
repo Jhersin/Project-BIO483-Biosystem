@@ -18,7 +18,7 @@ Where:
 The loss function used to train the model is as follows:
 
 $$
-\theta_B = \min_{\theta} \left( \frac{1}{2} \sum \| B\theta(y) - x \|^2 \right)
+\theta_B = \min_{\theta} \left( \frac{1}{2} \sum \| \theta_B(y) - x \|^2 \right)
 $$
 
 Where:  
