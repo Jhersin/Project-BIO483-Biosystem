@@ -11,9 +11,16 @@ x = B_{\theta}(y)
 $$
 
 Where:  
-- x represents the undersampled data in the image domain,  
-- y represents the fully sampled data in the image domain,  
-- B is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
+- **x**: Undersampled data in the image domain.
+- **y**: Fully sampled data in the image domain.
+- **B**: Transformation matrix that maps the undersampled data to the fully sampled data.
+
+The relationship can be expressed as:
+
+$$
+\mathbf{y} = \mathbf{B} \cdot \mathbf{x}
+$$
+
 
 ### Loss Function
 
