@@ -2,8 +2,6 @@
 
 Magnetic Resonance Imaging (MRI) is a crucial diagnostic tool that allows us to capture detailed images of the inside of our body. However, acquiring these images often takes a long time. One way to speed up this process is by skipping certain lines in the k-space data beyond the Nyquist limit. While this reduces scanning time, it also introduces undesirable artifacts in the images.  
 
-### Project Overview
-
 This project explores a machine learning-based approach for improving image quality in MRI reconstruction by selectively skipping lines in the k-space. Specifically, only 25% and 13% of the k-space lines are selected. The goal is to use machine learning techniques to reconstruct the missing data and improve the quality of the resulting image.
 
 In this approach, we have access to both the undersampled and fully sampled data. The objective is to calculate the parameters of a matrix that can convert the undersampled data into fully sampled data. This problem can be mathematically expressed as:
@@ -17,8 +15,6 @@ Where:
 - \(y\) represents the fully sampled data in the image domain,  
 - \(B\) is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
 
-### Loss Function
-
 The loss function used to train the model is as follows:
 
 $$
@@ -28,8 +24,6 @@ $$
 Where:  
 - \(\theta_B\) represents the parameters of the matrix \(B\) that we want to compute.  
 - The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
-
-### Optimization
 
 The optimization problem is solved using the Adam optimization method.
 
