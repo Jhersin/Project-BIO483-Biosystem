@@ -41,15 +41,17 @@ The optimization problem is solved using the Adam optimization algortihm.
 
   ## Project Structure
 
-- **Data Exploration**: Contains initial exploration of the train, validation, and test datasets.
-- **Dataset**: Contains the `kneedataset` class that merges the input and output images.
-- **FastTakitoMulticoilPreprocessing**: Contains the program that organizes the data into 4x and 8x acceleration factors.
-- **Models**: Contains the CNN-based models.
-- **Transfer Learning**: Part of the code that freezes the encoder part in the U-Net.
-- **Utils**: Contains various utility functions such as Fourier transform, inverse Fourier transform, cropping, etc.
-- **Model1_UNET2017_MC4**: Contains the model to train Single Coil to Multi Coil.
-- **Model2_UNET2017_MC4_TL**: Contains the model to train undersampled images (4x acceleration) to fully sampled images.
-- **Model3_UNET2017_MC8_TL**: Contains the model to train undersampled images (8x acceleration) to fully sampled images.
+| **Program**                        | **Description**                                                                 |
+|------------------------------------|---------------------------------------------------------------------------------|
+| **Data Exploration**               | Contains initial exploration of the train, validation, and test datasets.       |
+| **Dataset**                        | Contains the `kneedataset` class that merges the input and output images.       |
+| **FastTakitoMulticoilPreprocessing** | Contains the program that organizes the data into 4x and 8x acceleration factors. |
+| **Models**                         | Contains the CNN-based models.                                                  |
+| **Transfer Learning**              | Part of the code that freezes the encoder part in the U-Net.                    |
+| **Utils**                          | Contains various utility functions such as Fourier transform, inverse Fourier transform, cropping, etc. |
+| **Model1_UNET2017_MC4**            | Contains the model to train Single Coil to Multi Coil.                          |
+| **Model2_UNET2017_MC4_TL**         | Contains the model to train undersampled images (4x acceleration) to fully sampled images. |
+| **Model3_UNET2017_MC8_TL**         | Contains the model to train undersampled images (8x acceleration) to fully sampled images. |
 
 
 ## Installation
