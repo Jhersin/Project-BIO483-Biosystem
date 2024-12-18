@@ -2,19 +2,36 @@
 
 Magnetic Resonance Imaging (MRI) is a crucial diagnostic tool that allows us to capture detailed images of the inside of our body. However, acquiring these images often takes a long time. One way to speed up this process is by skipping certain lines in the k-space data beyond the Nyquist limit. While this reduces scanning time, it also introduces undesirable artifacts in the images.  
 
-This project explores a method to skip lines in the k-space domain by treating the problem as an inverse problem. The goal is to reconstruct the best high-resolution image-x from the undersampled k-space data-s. This problem can be expressed mathematically as:  
+### Project Overview
+
+This project explores a machine learning-based approach for improving image quality in MRI reconstruction by selectively skipping lines in the k-space. Specifically, only 25% and 13% of the k-space lines are selected. The goal is to use machine learning techniques to reconstruct the missing data and improve the quality of the resulting image.
+
+In this approach, we have access to both the undersampled and fully sampled data. The objective is to calculate the parameters of a matrix that can convert the undersampled data into fully sampled data. This problem can be mathematically expressed as:
 
 $$
-f(x) = \min \|s - Ex\|_2^2 + \lambda \|x\|_2^2
-$$  
+x = B(y)
+$$
 
 Where:  
-- \(s\) is the undersampled data,  
-- \(x\) is the high-resolution image,  
-- \(E\) combines the undersampling mask, coil sensitivity, and Fourier transform,  
-- \(\lambda\) is a regularization term.  
+- \(x\) represents the undersampled data in the image domain,  
+- \(y\) represents the fully sampled data in the image domain,  
+- \(B\) is the matrix that we want to calculate. This matrix transforms the undersampled data into fully sampled data.
 
-The project explores simple 1D and 2D examples to address this problem. It focuses on reconstructing \(x\) (the high-resolution image) using methods such as the pseudoinverse matrix and gradient descent.  
+### Loss Function
+
+The loss function used to train the model is as follows:
+
+$$
+\theta_B = \min_{\theta} \left( \frac{1}{2} \sum \| B\theta(y) - x \|^2 \right)
+$$
+
+Where:  
+- \(\theta_B\) represents the parameters of the matrix \(B\) that we want to compute.  
+- The goal is to minimize the difference between the undersampled data and the reconstruction of the fully sampled data.
+
+### Optimization
+
+The optimization problem is solved using the Adam optimization method.
 
 ## Table of Contents
 1. [Features](#features)
